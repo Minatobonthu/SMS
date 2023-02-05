@@ -27,15 +27,9 @@ app.include_router(schools.router)
 app.include_router(roles.router)
 app.include_router(users.router)
 
-@app.get("/ping")
+@app.get("/")
 def read_root():
     return {"response": "Test complete and ping Sucessful"}
-
-@app.get("/test")
-async def test( current_user: str = Depends(oauth2.get_current_user)):
-    print(current_user)
-    return {"got": "details"}
-
 
 if __name__ == "__main__":
     models.Base.metadata.create_all(bind=engine)
