@@ -1,5 +1,4 @@
-from fastapi import FastAPI, Depends
-import oauth2
+from fastapi import FastAPI
 import models
 from database import engine
 from fastapi.middleware.cors import CORSMiddleware
