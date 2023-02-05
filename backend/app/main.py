@@ -9,7 +9,7 @@ from fastapi import FastAPI
 import uvicorn
 from superuser import create_superuser
 from routers import login, schools,roles,users
-from config import Settings
+
 
 app = FastAPI()
 
