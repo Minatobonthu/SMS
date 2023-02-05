@@ -39,7 +39,7 @@ async def test( current_user: str = Depends(oauth2.get_current_user)):
 
 if __name__ == "__main__":
     models.Base.metadata.create_all(bind=engine)
-    create_superuser()
+    # create_superuser()
     uvicorn.run("main:app", reload = True)
     
     
